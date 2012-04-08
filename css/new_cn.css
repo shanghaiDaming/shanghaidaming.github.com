@@ -13,7 +13,7 @@
   margin-left:100px;
   margin-right:100px;
   padding:0px 50px 0px 50px;
-  font-family;sans-serif;
+  font-family:heveltica;
 }
 
 .header {
@@ -33,20 +33,22 @@
   background-color: white;
   color:white;
 }
+
 .view{
   margin-top: 1px;
   margin-bottom: 1px;
   padding:5px;
   float:left;
-  width:749px;
-  height:288px;
-  background-color: black;
+  width:739px;
+  height:278px;
+  background-color: white;
+  border:5px solid black;
 
 }
 
 .view img{
-  margin: 2px;
-  
+  margin: 3px;
+
 }
 
 .menu{
@@ -165,11 +167,21 @@
   background-color: white;
 }
 
+
 .footer{
   height:50px;
+  margin-top:5px;
   padding:2px ;
   float:center;
   text-align:center;
   color:black;
+  font-size:13px;
   background-color: white;
+}
+
+#version a{
+  color:black;
+  text-decoration:none;
+  font-size:12px;
+  font-family:helvetica;
 }
