@@ -1,0 +1,175 @@
+/* 
+    Document   : new
+    Created on : Apr 1, 2012, 9:11:03 AM
+    Author     : Aven
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.container{
+  float:center;
+  width:960px;
+  margin-top:0px;
+  margin-left:100px;
+  margin-right:100px;
+  padding:0px 50px 0px 50px;
+  font-family;sans-serif;
+}
+
+.header {
+  margin-bottom:0px;
+  background: white url(../Images/bg/DAMING_cn1.png) center no-repeat ;
+  height:150px;
+}
+
+.header ul {
+  color:#6E6A8F;
+  list-style-type:none;
+  float:right;
+  display: block;
+}
+.content{
+  height: 300px;
+  background-color: white;
+  color:white;
+}
+.view{
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding:5px;
+  float:left;
+  width:749px;
+  height:288px;
+  background-color: black;
+
+}
+
+.view img{
+  margin: 2px;
+  
+}
+
+.menu{
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+  width:200px;
+  height:298px;
+  background-color: black;
+  float: right;
+  display: block;
+  color:white;
+}
+
+.menu a{
+  width:200px;
+  height:43px;
+  display:block;
+  text-align: center;
+  padding-top:30px;
+  padding-bottom: 0px;
+}
+.menu li{
+  list-style-type: none;
+  color:black
+}
+
+.topline{
+  width:50px ;
+  text-align:center;
+  border-top : 1px solid grey;
+}
+
+.about{
+  padding:5px ;
+  height: 170px;
+  background-color: black ;
+  text-align: left;
+}
+
+
+.about_contact{
+  float:left;
+  width:295px;
+  height:170px;
+  background-color: grey;
+
+}
+.contactab , .contactab a{
+  width:147px;
+  height:25px;
+  text-align: center;
+  background-color: black;
+  display: inline;
+}
+#adds{
+  float:left;
+
+}
+
+#cont{
+  float:right;  
+}
+
+.contactab a#adds span{
+  width:275px;
+  height:125px;
+}
+
+.contactab a#adds:hover span{
+  display:block; 
+  position:relative; 
+  top:7px;
+  background-color:white;
+  opacity:0.5;     
+  color:black;
+  font-family: arial;
+  font-weight:bold;
+  font-size:11pt;
+}
+
+.contactab a#adds span{
+  display:none;
+  text-align:left;
+  padding:10px
+}
+
+
+.contactab a#cont span{
+  width:275px;
+  height:125px;
+}
+
+.contactab a#cont:hover span{
+  display:block; 
+  position:relative; 
+  top:7px;
+  left:-148px;
+  background-color:white;
+  opacity:0.5;     
+  color:black;
+  font-family: arial;
+  font-weight:bold;
+  font-size:11pt;
+}
+
+.contactab a#cont span{
+
+  
+  display: none;
+  text-align:left;
+  padding:10px
+}
+
+.about_product{
+  float:right;
+  background-color: white;
+}
+
+.footer{
+  height:50px;
+  padding:2px ;
+  float:center;
+  text-align:center;
+  color:black;
+  background-color: white;
+}

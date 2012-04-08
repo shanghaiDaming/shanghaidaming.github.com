@@ -1,0 +1,57 @@
+/* 
+    Document   : style
+    Created on : Mar 25, 2012, 10:59:41 PM
+    Author     : Aven
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+  float: center;
+  width:960px;
+  background: #bbbbcb;
+  color: black;
+  font-family: Arial;
+  padding:10px;
+  margin:5px;
+
+}
+
+img{
+  border:3px solid white;
+}
+
+
+.header {
+  text-align:center;
+  height:100px;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.container{
+  float: center;
+  padding-left:90px;
+  padding-right:900px;
+}
+.content{
+  float: center;
+}
+
+
+.footer{
+  text-align: center;
+  padding-top : 50px;
+}
+.row title{
+  text-align:center;  
+  background-color:burlywood;
+}
+
+#jobstitle h3{
+    background-color:burlywood;
+}
+
+.row-fluid{
+  background-color: black;
+}
