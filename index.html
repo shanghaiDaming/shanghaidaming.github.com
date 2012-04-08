@@ -21,7 +21,7 @@ and open the template in the editor.
       .about_product img{border:0px;border-radius: 5px; -webkit-border-radius: 5px }
 
       .select_direction{cursor:hand}
-      ul, li {list-style:none; padding:0; margin:0; color:white;}
+      ul, li {list-style:none; padding:0; margin:0; color:green;}
 
       .slider_td{padding-top:15px; }
       .slider_ul li {width:156px; height:116px; padding-right:9px; float:left; white-space: nowrap; overflow:hidden; }
@@ -29,6 +29,7 @@ and open the template in the editor.
       .slider_ul li h1 {font-family: arial; padding:0; margin:0; color: #000 ; width:150px; height:10px; line-height:10px; overflow:hidden; text-align:center; font-size:11px; font-weight:normal; padding-top:0
                           px; white-space: nowrap;}
       .select_direction{  background-color: #000; }
+    
     </style>
 
     <script>
@@ -140,18 +141,17 @@ and open the template in the editor.
   <body>
     <div class="container">
         <div class="header">
-        <li><a href="newhtml_en.html">English</a></li>
-        <li><a href="newhtml_cn.html">Chinese</a></li>
+        
       </div>
 
       <div class="content">
         <div class="view">
-         <img src="imgs/product_cn.png"/>
+         <a html="test4.html"><img src="imgs/product_cn1.png" /></a>
             
 
         </div>
         <div class="menu">
-           <li><a href="newhtml_cn.html">首 页</a></li>
+           <li><a href="index.html">首 页</a></li>
           <li><a href="about_cn.html" class="topline">公司介绍</a></li>
           <li><a href="product_cn.html" class="topline">供应产品</a></li>
           <li><a href="contact_cn.html" class="topline">联系我们</a></li>         
@@ -196,7 +196,11 @@ and open the template in the editor.
       </div>
 
       <div class="footer">
-        <p>&COPY;Shanghai DAMING International Trade Co., Ltd. </p>
+        <div id="version" >
+        <a href="newhtml_en.html">English</a> | <a href="index.html">Chinese</a>
+        </div>
+        <p>&COPY;Shanghai DAMING International Trade Co., Ltd. </p> 
+        
 
       </div>
     </div>

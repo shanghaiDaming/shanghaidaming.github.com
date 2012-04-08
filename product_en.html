@@ -7,11 +7,21 @@ and open the template in the editor.
   <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <style>
 
 
+      .header {
+        margin-bottom:0px;
+        background: white url(../Images/bg/DAMING_en1.png) center no-repeat ;
+        float:center;
+        position:fixed;
+        left:150px;
+      }
+      
       .prd_container{
+        position: fixed; 
+        top:160px;
         background-color:white;
         color:lightslategray;
         font-family: arial;
@@ -25,9 +35,8 @@ and open the template in the editor.
         font-family: sans-serif;
       }
 
-
       .prd_list {
-        position: fixed; 
+
         float:left;     
         width: 170px;
         height:1200px;
@@ -36,13 +45,13 @@ and open the template in the editor.
       }
 
       .prd_main{
-        float:left;     
         position: relative;
-        left:180px;
+        left:175px;
         top:1px;
         background-color: white;
-        border:5px solid black;
+        border:5px solid #6E6A8F; 
         width: 790px;
+        text-align: left;
 
 
       }
@@ -69,16 +78,15 @@ and open the template in the editor.
 
       }
 
-
       .prd_list p.hover{
         color:#6E6A8F; 
         text-decoration: none;
 
       } 
-      .prd_list h3{
-        padding: 3px;
-        text-align: center;
-        padding:5px;
+      .prd_list h4{
+        padding-left:5px;
+        padding-bottom:0;
+        text-align: left;
         color: white;
       }
 
@@ -122,25 +130,29 @@ and open the template in the editor.
         padding-bottom: 5px;
         display: block;
       }
-      
+
       li span{
         display:block;
-        
+
       }
-      
-     
+
+
 
 
     </style>
   </head>
   <body>
 
+
+    <div class="header">
+      <img src="Images/bg/DAMING_en1.png"/>
+
+    </div>
     <div class="prd_container">
 
 
       <div class="prd_list"> 
-
-        <h3>List</h3>
+        <h4>List</h4>
         <p><a href="#1">Solid carbide shank drills</a></p>
         <li><a href="#1">Solid carbide shank drills1</a></li>
         <li><a href="#1">Solid carbide shank drills2</a></li>
@@ -150,7 +162,7 @@ and open the template in the editor.
 
         <p><a href="#3">Weldon shank</a></p>
         <li><a href="#3">Weldon shank</a></li>
-        
+
         <p><a href="#4">Cutting nozzles</a></p>
         <li><a href="#4-1">Cutting nozzle1</a></li>
         <li><a href="#4-2">Cutting nozzle2</a></li>
@@ -158,11 +170,11 @@ and open the template in the editor.
         <p><a href="#5">Portable welding rod dryer</a></p>
         <li><a href="#5-1">Portable welding rod dryer 5Kg</a></li>
         <li><a href="#5-2">Portable welding rod dryer 10Kg</a></li>
-        
+
         <p><a href="#6">Tools and hardware</a></p>
         <li><a href="#6">Tools</a></li>
-        
-     
+
+
       </div>
 
 
@@ -185,7 +197,7 @@ and open the template in the editor.
         <h3><a id="3">Weldon shank</a></h3>
         <img src="Images/slide/003.jpg"/></br>
         <img src="Images/slide/003.jpg"/></br>
-        
+
 
         <h3><a id="4">Cutting nozzles</a></h3>
         <img id="4-1" src="Products/cutting_nozzle_001.jpg" width="200" height="200"/><span>cutting nozzle1</span>
@@ -202,12 +214,10 @@ and open the template in the editor.
         <img id="5-1" src="Products/Portable_welding_rod_dryer_003.jpg" />
         <img id="5-1" src="Products/Portable_welding_rod_dryer_004.jpg" />
         <img id="5-2" src="Products/Portable_welding_rod_dryer_005.png" />
-        
+
         <h3><a id="6">Tools and hardware</a></h3>
         <img src="Products/tools_001.jpg" width="150" height="150"/>
         <img src="Products/tools_002.jpg" width="150" height="150"/></br>
-       
-
 
       </div>
     </div>
