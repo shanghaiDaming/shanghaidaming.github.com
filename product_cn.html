@@ -5,205 +5,567 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>产品介绍</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+     <link rel="stylesheet" href="css/new_cn.css" type="text/css">
+
+  
     <style>
 
-
-      .prd_container{
-        background-color:white;
-        color:lightslategray;
-        font-family: arial;
-        width:960px;
-        float:center;
-
-        margin-top:0px;
-        margin-left:100px;
-        margin-right:100px;
-        padding:0px 50px 0px 50px;
-        font-family: sans-serif;
+      .product_container{
+        border-top:3px solid #6E6A8F;
       }
 
-
       .prd_list {
-        position: fixed; 
-        float:left;     
-        width: 170px;
-        height:1200px;
-        background-color: gray;
-        margin:0;
+        background-color: #6E6A8F ;
+        margin:3px 0 3px 0 ;
+        padding-top:5px;
+        height:25px;
+        color:white;
+        position: relative;
       }
 
       .prd_main{
-        float:left;     
-        position: relative;
-        left:180px;
-        top:1px;
         background-color: white;
-        border:5px solid black;
-        width: 790px;
-
-
+        overflow-y:scroll;
       }
       /********************************************************************
       prd_list
       ********************************************************************/
 
-      .prd_list a {
-        font-size: 13px;
-        color:black;
-        text-decoration: none;
-        padding:3px 0 3px 5px;
-      }
-      .prd_list li a {
-        color:white;
-        font-size: 12px;
-        text-decoration: none;
-        padding:3px 0 3px 5px;
-      }
-
-      .prd_list a:hover{
-        color:#cc9900;
-        text-decoration: none;
-
-      }
-
-
-      .prd_list p.hover{
-        color:#6E6A8F; 
-        text-decoration: none;
-
-      } 
-      .prd_list h3{
-        padding: 3px;
-        text-align: center;
-        padding:5px;
+      .prd_list ul{
         color: white;
+        font-style: bold;
+        display: inline;
+        width: 100px;
       }
 
-      .prd_list p{
-        border-bottom:1px solid lightgray;
-        padding-left: 5px;
-      }
-      .prd_list li{
-        font-size: 12px;
+      .prd_list ul a,a:link , a:active{
         color:white;
-        padding:5px;
-        line-height: 90%;        
+        font-size: 13px;
+        text-decoration: none; 
+        padding:4px;
+      }
+
+      .prd_list ul a:hover{
+        text-decoration: none;
+        background-color: white;
+        opacity: 0.9;
+        padding:4px;
+        border-radius: 5px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        color: #6E6A8F ;
+      }
+
+      
+      .topbar{
+        position:fixed;
+        top:630px;
+        left:45px;
+      }
+
+      .topbar a.top ,a.top:hover, a.top:link{
+        text-decoration: none;
+        font-size: 12px;
+        color: white ;
+        font-family:Arial;
+
+        background-color: #6E6A8F ;
+        padding:24px 20px 24px 20px;
+        border-radius: 30px;
+        -moz-border-radius: 50px;        
+        -webkit-border-radius: 50px;
       }
 
       /********************************************************************
       MAIN
       ********************************************************************/
-      .prd_main h3{
-        border-bottom : 1px dotted gray;
-        color:#6E6A8F; 
-        padding-left:5px;
-        padding-top:30px;
+      .prd_main h2{
+        width:960px;
+        color:#6E6A8F ;
+        padding:15px 0 3px 10px;
+        border-bottom:1px dotted #6E6A8F ;
       }
 
-      .prd_main p{
-        padding:5px;
-        color:#6E6A8F; 
-      }
-
-      .prd_main img{
-        margin-left:5px;
-        padding:5px;
-        border:1px dotted grey;
-      }
-
-      li{
-        list-style-type: square;
-        padding-bottom: 5px;
+      .prd_main .case{
+        width:954px;
+        height:340px;
+        border:3px double grey;
         display: block;
       }
-      
-      li span{
-        display:block;
+
+
+      .case .prd_name {
+        width:944px;
+        padding-top:3px;
+        padding-bottom: 3px;
+        padding-left:10px;
+        margin-top:0;
+        margin-bottom:0;
+        background-color: black;
+        color:white;
+        font-size:12pt;
       }
-      
+
+      .case .prd_nest{
+        display:block;
+        width:954px;
+        height:286px;
+      }
+
+      .case .prd_nest .prd_img{
+        float:left;
+        margin:5px;
+        width: 275px;
+        height:275px;
+        border:1px solid lightgrey;
+      }
+
+      .case .prd_nest .prd_table{
+        float:left;
+        font-family:serif;
+        margin-left:5px;
+      }
+      .case .prd_detail{
+        padding-top:2px;
+        padding-bottom: 5px;
+        padding-left:10px;
+        margin-top:1px;
+        margin-bottom:0;
+        font-family: sans-serif;
+        font-size: 12px;
+        border-top:1px solid black;
+      }
+
+
+      .case .prd_nest .prd_table caption{
+        caption-side:top;
+        color:black;
+        text-align:right;
+      }
+
+      th{
+        width: 101px;
+        background-color: lightgrey;
+        color:black;
+      }
+      table,td,th
+      {
+        border:1px solid lightgrey;
+        color:black;
+        text-align:center;
+        font-size:13px;
+      }
 
     </style>
   </head>
+  
   <body>
+    <div class="topbar">
 
-    <div class="prd_container">
-
-
-      <div class="prd_list"> 
-
-        <h3>List</h3>
-        <p><a href="#1">整体硬质合金内冷钻</a></p>
-        <li><a href="#1">整体硬质合金内冷钻-1</a></li>
-        <li><a href="#1">整体硬质合金内冷钻-2</a></li>
-
-        <p><a href="#2">整体硬质合金铰刀</a></p>
-        <li><a href="#2">整体硬质合金铰刀-1</a></li>
-
-
-        <p><a href="#3">整体硬质合金空心钻</a></p>
-        <li><a href="#3">整体硬质合金空心钻</a></li>
-        <li><a href="#3">整体硬质合金空心钻头</a></li>
-        
-        <p><a href="#4">割咀</a></p>
-        <li><a href="#4-1">割咀1</a></li>
-        <li><a href="#4-2">割咀2</a></li>
-       
-
-        <p><a href="#5">手提式电焊条保温筒</a></p>
-        <li><a href="#5">手提式电焊条保温筒 5Kg</a></li>
-        <li><a href="#5">手提式电焊条保温筒 10Kg</a></li>
-     
-      </div>
-
-
-
-      <div class="prd_main"  >
-
-        <h3><a id="1">整体硬质合金内冷钻</a></h3>
-        <img src="Products/Solid_carbide_shank_drill_001.gif"/></br>
-        <img src="Products/Solid_carbide_shank_drill_003.png"/></br>
-        <img src="Products/Solid_carbide_shank_drill_004.png"/></br>
-        <img src="Products/Solid_carbide_shank_drill_005.gif"/></br>
-        <img src="Products/Solid_carbide_shank_drill_006.jpg"/></br>
-
-        <h3><a id="2">整体硬质合金铰刀</a></h3>
-        <img src="Products/Reamer_001.jpg"/></br>
-        <img src="Products/Reamer_002.jpg"/></br>
-        <img src="Products/Reamer_003.jpg"/></br>
-
-
-
-        <h3><a id="3">整体硬质合金空心钻</a></h3>
-        <img src="Images/slide/003.jpg"/></br>
-        <img src="Images/slide/003.jpg"/></br>
-
-        <h3><a id="4">割咀</a></h3>
-        <img id="4-1" src="Products/cutting_nozzle_001.jpg" width="200" height="200"/><span>cutting nozzle1</span>
-        <img id="4-1" src="Products/cutting_nozzle_002.jpg" width="200" height="200"/><span>cutting nozzle1</span>
-        <img id="4-1" src="Products/cutting_nozzle_003.jpg" width="200" height="200"/><span>cutting nozzle1</span>
-        <img id="4-2" src="Products/cutting_nozzle_004.png" width="200" height="200"/><span>cutting nozzle2</span>
-        <img id="4-2" src="Products/cutting_nozzle_005.png" width="200" height="200"/><span>cutting nozzle2</span>
-        <img id="4-2" src="Products/cutting_nozzle_006.png" width="200" height="200"/><span>cutting nozzle2</span>
-
-
-        <h3><a id="5">手提式电焊条保温筒</a></h3>
-        <img src="Products/Portable_welding_rod_dryer_001.jpg" width="150" height="150"/></br>
-        <img src="Products/Portable_welding_rod_dryer_002.jpg" width="150" height="150"/></br>
-        <img src="Products/Portable_welding_rod_dryer_003.jpg" width="150" height="150"/></br>
-        <img src="Products/Portable_welding_rod_dryer_004.jpg" width="150" height="150"/></br>
-        <img src="Products/Portable_welding_rod_dryer_005.jpg" width="150" height="150"/></br>
-        <img src="Products/Portable_welding_rod_dryer_006.jpg" width="150" height="150"/></br>
-
-        <h3><a id="6">五金工具及劳防用品等</a></h3>
-        <img src="Products/tools_001.jpg" width="150" height="150"/>
-        <img src="Products/tools_002.jpg" width="150" height="150"/></br>
-       
-
-
-      </div>
+      <span><a href="#list"  class="top"> TOP </a></span>
     </div>
+
+
+    <div class="container">
+      <div class="header" id="list">
+
+      </div>
+
+
+      <div class="product_container">
+
+        <div class="prd_list" > 
+
+          <ul><a href="#1">整体硬质合金内冷钻</a>  
+          </ul>
+
+          <ul><a href="#2">整体硬质合金铰刀</a>         
+          </ul>
+
+          <ul><a href="#3">整体硬质合金空心钻</a></ul>
+
+
+          <ul><a href="#4">割咀</a>        
+          </ul>
+
+          <ul><a href="#5">手提式电焊条保温筒</a>         
+          </ul>
+
+          <ul><a href="#6">Tools and Hardwares</a>
+          </ul>
+
+
+        </div>
+
+        <div class="prd_main"  >
+
+          <h2><a id="1">整体硬质合金内冷钻</a></h2>
+          <div class="case">
+            <p class="prd_name">整体硬质合金内冷钻</p>
+
+            <div class="prd_nest">
+              <img class="prd_img" src="Products/Solid_carbide_shank_drill_006.jpg" />
+
+              <table class="prd_table">
+                <caption>*</caption>
+                <tr>
+                  <th>内冷钻型号</th>
+                  <th>Diameter ØD</th>
+                  <th>Flute Length</th>
+                  <th>Place of Origin</th>
+                  <th>etc.</th>
+                  <th>etc.</th>
+                </tr>
+                <tr>
+                  <td>02KIER-RT1</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>02KIER-RT2</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>02KIER-RT3</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>02KIER-RT4</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr
+                <tr>
+                  <td>02KIER-RT5</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>02KIER-RT6</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>02KIER-RT7</td>
+                  <td>Ø 14.3</td>
+                  <td>4</td>
+                </tr>
+
+              </table>
+
+            </div>
+            <p class="prd_detail"> 产品描述 : 整体硬质合金内冷钻</p>
+
+          </div>
+
+
+          <div class="prd_main"  >
+
+            <h2><a id="2">整体硬质合金铰刀</a></h2>
+            <div class="case">
+              <p class="prd_name">整体硬质合金铰刀</p>
+              <div class="prd_nest">
+                <img class="prd_img" src="Products/Reamer_002.jpg" />
+
+                <table class="prd_table">
+                  <caption>*</caption>
+                  <tr>
+                    <th>铰刀型号</th>
+                    <th>Diameter ØD</th>
+                    <th>Flute Length</th>
+                    <th>Place of Origin</th>
+                    <th>etc.</th>
+                    <th>etc.</th>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT1</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT2</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT3</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT4</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr
+                  <tr>
+                    <td>02KIER-RT5</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT6</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT7</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+
+                </table>
+
+              </div>
+              <p class="prd_detail"> 产品描述 : 整体硬质合金铰刀 </p>
+
+            </div>
+
+
+
+            <h2><a id="3">整体硬质合金空心钻</a></h2>
+            <div class="case">
+              <p class="prd_name"> 整体硬质合金空心钻</p>
+
+              <div class="prd_nest">
+                <img class="prd_img" src="Products/Weldon shank_002.jpg" width="275" height="275" />
+
+                <table class="prd_table">
+                  <caption>*</caption>
+                  <tr>
+                    <th>空心钻型号</th>
+                    <th>Diameter ØD</th>
+                    <th>Flute Length</th>
+                    <th>Place of Origin</th>
+                    <th>etc.</th>
+                    <th>etc.</th>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT1</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT2</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT3</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT4</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr
+                  <tr>
+                    <td>02KIER-RT5</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT6</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT7</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+
+                </table>
+
+              </div>
+              <p class="prd_detail"> 产品描述 : 整体硬质合金空心钻</p>
+
+            </div>
+
+
+            <h2><a id="4">割咀</a></h2>
+            <div class="case">
+              <p class="prd_name">割咀</p>
+              <div class="prd_nest">
+                <img class="prd_img" src="Products/Cutting-Nozzle_1.jpg" width="275" height="275"  />
+
+                <table class="prd_table">
+                  <caption>*</caption>
+                  <tr>
+                    <th>割咀型号</th>
+                    <th>Diameter ØD</th>
+                    <th>Flute Length</th>
+                    <th>Place of Origin</th>
+                    <th>etc.</th>
+                    <th>etc.</th>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT1</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT2</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT3</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT4</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr
+                  <tr>
+                    <td>02KIER-RT5</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT6</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT7</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+
+                </table>
+
+              </div>
+
+              <p class="prd_detail"> 产品描述 : 割咀</p>
+
+
+            </div>
+
+            <h2><a id="5">手提式电焊条保温筒</a></h2>
+            <div class="case">
+              <p class="prd_name">手提式电焊条保温筒</p>
+              <div class="prd_nest">
+                <img class="prd_img" src="Products/Portable-Welding-Rod-Dryers.jpg" width="275" height="275"/>
+
+                <table class="prd_table">
+                  <caption>*</caption>
+                  <tr>
+                    <th>保温筒型号</th>
+                    <th>Diameter ØD</th>
+                    <th>Flute Length</th>
+                    <th>Place of Origin</th>
+                    <th>etc.</th>
+                    <th>etc.</th>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT1</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT2</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT3</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT4</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr
+                  <tr>
+                    <td>02KIER-RT5</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT6</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT7</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+
+                </table>
+
+              </div>
+              <p class="prd_detail"> 产品描述 : 手提式电焊条保温筒</p>
+
+            </div>
+
+            <h2><a id="6">Tools and hardware</a></h2>
+            <div class="case">
+              <p class="prd_name">Tools and hardware</p>
+              <div class="prd_nest">
+                <img class="prd_img" src="Products/tools_001.jpg" width="275" height="275"/>
+
+                <table class="prd_table">
+                  <caption>*</caption>
+                  <tr>
+                    <th>产品型号</th>
+                    <th>Diameter ØD</th>
+                    <th>Flute Length</th>
+                    <th>Place of Origin</th>
+                    <th>etc.</th>
+                    <th>etc.</th>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT1</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT2</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT3</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT4</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr
+                  <tr>
+                    <td>02KIER-RT5</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT6</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>02KIER-RT7</td>
+                    <td>Ø 14.3</td>
+                    <td>4</td>
+                  </tr>
+
+                </table>
+
+              </div>
+              <p class="prd_detail"> 产品描述 : Portable welding rod dryer</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
