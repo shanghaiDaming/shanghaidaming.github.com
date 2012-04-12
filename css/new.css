@@ -24,143 +24,52 @@
 
 
 .content{
-  height: 300px;
+  border-top : 5px solid  #6E6A8F;
+  height: 310px;
   background-color: white;
   color:white;
+  padding-top:3px;
+ 
+ 
 }
 
 .view{
-  margin-top: 1px;
+  margin-top: 2px;
   margin-bottom: 1px;
-  padding:5px;
+  padding:5px 0 5px 0;
   float:left;
-  width:739px;
-  height:278px;
+  width:749px;
+  height:283px;
   background-color: white;
-  border:5px solid black;
+  border:5px solid #6E6A8F;
 
 }
 
 .view img{
-  margin: 3px;
+  margin: 0px;
 
 }
 
-.menu{
-  border-top:1px solid white;
-  border-bottom:1px solid white;
-  width:200px;
-  height:298px;
-  background-color: black;
-  float: right;
-  display: block;
-  color:white;
-}
 
-.menu a{
-  width:200px;
-  height:43px;
-  display:block;
-  text-align: center;
-  padding-top:30px;
-  padding-bottom: 0px;
-}
+
 .menu li{
   list-style-type: none;
-  color:black
 }
 
 .topline{
   width:50px ;
   text-align:center;
-  border-top : 1px solid grey;
 }
 
-.about{
-  padding:5px ;
-  height: 170px;
-  background-color: black ;
+.about_slide{
+  border-top:5px solid black;
+  border-bottom:5px solid black;
+  margin-top:0px;
+  height: 175px;
+  background-color:white ;
   text-align: left;
 }
 
-
-.about_contact{
-  float:left;
-  width:295px;
-  height:170px;
-  background-color: grey;
-
-}
-.contactab , .contactab a{
-  width:147px;
-  height:25px;
-  text-align: center;
-  background-color: black;
-  display: inline;
-}
-#adds{
-  float:left;
-
-}
-
-#cont{
-  float:right;  
-}
-
-.contactab a#adds span{
-  width:275px;
-  height:125px;
-}
-
-.contactab a#adds:hover span{
-  display:block; 
-  position:relative; 
-  top:7px;
-  background-color:white;
-  opacity:0.5;     
-  color:black;
-  font-family: arial;
-  font-weight:bold;
-  font-size:11pt;
-}
-
-.contactab a#adds span{
-  display:none;
-  text-align:left;
-  padding:10px
-}
-
-
-.contactab a#cont span{
-  width:275px;
-  height:125px;
-}
-
-.contactab a#cont:hover span{
-  display:block; 
-  position:relative; 
-  top:7px;
-  left:-148px;
-  background-color:white;
-  opacity:0.5;     
-  color:black;
-  font-family: arial;
-  font-weight:bold;
-  font-size:11pt;
-}
-
-.contactab a#cont span{
-
-
-  display: none;
-  text-align:left;
-  padding:10px
-}
-
-.about_product{
-  float:right;
-  background-color: white;
-}
 
 .footer{
   height:50px;
@@ -171,11 +80,12 @@
   color:black;
   font-size:13px;
   background-color: white;
+  font-family:helvetica;
 }
 
 #version a{
   color:black;
   text-decoration:none;
   font-size:12px;
-  font-family:helvetica;
+  
 }
