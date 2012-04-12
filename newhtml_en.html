@@ -50,11 +50,26 @@ and open the template in the editor.
       ul, li {list-style:none; padding:0; margin:0; color:white;}
       .slider_td{padding-top:15px; }
 
-      .slider_ul li { width:156px; height:116px; padding-right:9px; float:left; white-space: nowrap; }
+      .slider_ul li { width:166px; height:121px; padding-right:9px; float:left; white-space: nowrap; }
 
-      .slider_ul li img { vertical-align:top; width:150px; height:110px; border:3px solid black; border-radius: 5px; -webkit-border-radius: 5px;
+      .slider_ul li img { vertical-align:top; width:150px; height:110px; border:3px solid black; padding:2px;border-radius: 5px; -webkit-border-radius: 5px;
         white-space: nowrap;
       }
+	 .slider_ul li h1 {
+       	 	 font-family:serif; 
+		        padding:6px 0 3px 0; 
+		        margin-top:11px;  
+		        width:166px; 
+		        height:30px; 
+		        line-height:2px; 
+				overflow:hidden;
+				text-align:center; 
+		        font-size:12px; 
+		        font-weight:normal; 
+		        white-space:nowrap;
+	      
+      }
+      .select_direction{  background-color: #000; }
 
       
       .image_list {overflow: hidden;position: relative;height: 286px;width: 744px; border:1px solid white; cursor:pointer; clear:both;}
@@ -69,21 +84,7 @@ and open the template in the editor.
 
 .ul_label li.labelOverClass {font-weight:bold;}
 
-      .slider_ul li h1 {
-        font-family:serif; 
-        padding:3px; 
-        margin-top:13px;  
-        width:150px; 
-        height:15px; 
-        line-height:2px; 
-overflow:hidden;
-
-        text-align:center; 
-        font-size:12px; 
-        font-weight:normal; 
-        white-space:nowrap;
-      }
-      .select_direction{  background-color: #000; }
+     
     </style>
 
     <script>
@@ -171,26 +172,23 @@ overflow:hidden;
         if (my_config.timer) clearInterval(my_config.timer);
         var direction = type;
         var obj = new autoScroll(type);
-        obj.add_banner("Images/slide/001.jpg","product_en.html","Solid carbide chucking reamer","");
-        obj.add_banner("Images/slide/002.jpg","product_en.html","Solid carvide burnishing","");
-        obj.add_banner("Images/slide/003.jpg","product_en.html","Weldeon shank","");
-        obj.add_banner("Images/slide/004.jpg","product_en.html","Straight shanks","");
-        obj.add_banner("Images/slide/005.jpg","product_en.html","Cooled solid carbide straight","");
-        obj.add_banner("Images/slide/006.jpg","product_en.html","Solid carbide straight shank","");
-        obj.add_banner("Images/slide/007.jpg","product_en.html","Solid carbide straight shank","");
-        obj.add_banner("Images/slide/008.jpg","product_en.html","Burnishing drills","");
-        obj.add_banner("Images/slide/009.jpg","product_en.html","Cooled solid carbide straight drills","");
-        obj.add_banner("Images/slide/010.jpg","product_en.html","Cooled solid carbide straight drills","");
-        obj.add_banner("Images/slide/011.jpg","product_en.html","Burnishing drills","");
-        obj.add_banner("Images/slide/012.jpg","product_en.html","Burnishing drills","");
-        obj.add_banner("Images/slide/013.jpg","product_en.html","Solid shank twist","");
- 
- 
+			obj.add_banner("Images/slide/004.jpg","product_cn.html","Cooled solid carbide straight drill","");
+			obj.add_banner("Images/slide/005.jpg","product_cn.html","Cooled solid carbide straight drill","");
+			obj.add_banner("Images/slide/003.jpg","product_cn.html","Weldeon shank","");
+			obj.add_banner("Images/slide/006.jpg","product_cn.html","Cooled solid carbide straight drill","");
+			obj.add_banner("Images/slide/007.jpg","product_cn.html","Reamer","");
+			obj.add_banner("Images/slide/008.jpg","product_cn.html","Cooled solid carbide straight drill","");
+			obj.add_banner("Images/slide/011.jpg","product_cn.html","Reamer","");
+			obj.add_banner("Images/slide/012.jpg","product_cn.html","Reamer","");
+			obj.add_banner("Products/cutting_nozzle_003.jpg","product_cn.html","Cutting nozzle","");
+			obj.add_banner("Products/cutting_nozzle_006.png","product_cn.html","Cutting nozzle","");
+			obj.add_banner("Products/Portable_welding_rod_dryer_006.png","product_cn.html","Portable welding rod dryer","");
+			obj.add_banner("Products/Solid_carbide_shank_drill_005.gif","product_cn.html","Cooled solid carbide straight drill","");
+			obj.add_banner("Products/cuttingnozzle.png","product_cn.html","Cutting nozzle","");
+
         obj.play();
       }
-      
-      
-      
+    
       
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
