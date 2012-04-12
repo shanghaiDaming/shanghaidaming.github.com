@@ -1,0 +1,201 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>上海达鸣国际贸易有限公司 | Shanghai DAMING International Trade Co,. Ltd</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/new_copy.css" type="text/css" >
+    <style type="text/css">
+      a:link{color:#fff; text-decoration:none;}
+      a:visited{color:#fff; text-decoration:none;}
+      a:hover{color:#fff; text-decoration:underline;}
+      a:link{color:#fff; text-decoration:none;}
+      .about_product img{border:0px;border-radius: 5px; -webkit-border-radius: 5px }
+
+      .select_direction{cursor:hand}
+      ul, li {list-style:none; padding:0; margin:0; color:white;}
+
+      .slider_td{padding-top:15px; }
+      .slider_ul li {width:156px; height:116px; padding-right:9px; float:left; white-space: nowrap; overflow:hidden; }
+      .slider_ul li img {vertical-align:top; width:150px; height:110px; border:3px solid black;  border-radius: 5px; -webkit-border-radius: 5px;white-space: nowrap;}
+      .slider_ul li h1 {font-family: arial; padding:0; margin:0; color: #000 ; width:150px; height:10px; line-height:10px; overflow:hidden; text-align:center; font-size:11px; font-weight:normal; padding-top:0
+                          px; white-space: nowrap;}
+      .select_direction{  background-color: #000; }
+    </style>
+
+    <script>
+      var my_config = [];
+      with (my_config) {
+        my_config.speed = "20";
+        my_config.scroll = 1;
+        my_config.width = "606";
+        my_config.height = "155";
+        my_config.direction = "left";
+        my_config.banners;
+        my_config.slider;
+        my_config.slider_1;
+        my_config.slider_2;
+        my_config.timer;
+      }
+      function autoScroll(type){
+        my_config.direction = type;
+        this.items = [];
+        this.add_banner = function(image,link,title,target){
+          var newItem  = {};
+          newItem.image = image;
+          newItem.link = link;
+          newItem.title = title;
+          newItem.target = target;
+          this.items[this.items.length] = newItem;
+        }
+
+        this.play = function(){
+          my_config.banners = this.items;
+          scroll_html();
+          with (my_config) {
+            slider=document.getElementById("slider_box");
+            slider_1=document.getElementById("slider_box_1");
+            slider_2=document.getElementById("slider_box_2");
+            slider_2.innerHTML=slider_1.innerHTML;
+            timer=setInterval(do_timer,speed);
+          }
+        }
+      }
+
+      function scroll_html(){
+        var str = "", tmp = "", b = "", c ="", d = "";
+        for(var i=0;i<my_config.banners.length;i++){
+          var a = my_config.banners[i]
+          str += "<li><a href='"+a.link+"' target='"+a.target+"'><img src='"+a.image+"' width=150 height=110 title='"+a.title+"'></a><h1><a href='"+a.link+"' >"+a.title+"</a></h1></li>";
+        }
+        if (my_config.direction == "left" || my_config.direction == "right"){
+          b = "<div id=slider_scroller style='float: left; width: 800%'>";
+          c = " style='float: left'";
+          d = "</div>";
+        }
+        tmp += "<div id=slider_box onmouseover='do_stop()' onmouseout='do_move()' style='overflow:hidden; width:"+my_config.width+"px; height:"+my_config.height+"px'>";
+        tmp += b + "<div id=slider_box_1"+c+">" + str;
+        tmp += "</div><div id=slider_box_2"+c+">"+d+"</div></div>";
+        document.getElementById("slider_show").innerHTML = tmp;
+      }
+
+      function do_left() {my_config.direction='left'}
+      function do_right() {my_config.direction='right'}
+      function do_stop() {my_config.scroll=0}
+      function do_move() {my_config.scroll=1}
+
+      function do_timer(){
+        with(my_config){ 
+          if (scroll) {
+            if (direction == "top"){
+              if (slider_2.offsetTop-slider.scrollTop<=0){ slider.scrollTop-=slider_1.offsetHeight }
+              else {slider.scrollTop++}
+            } else if(direction == "down"){
+              if (slider_1.offsetTop-slider.scrollTop>=0) slider.scrollTop+=slider_2.offsetHeight
+              else {slider.scrollTop--}
+            } else if (direction == "left"){
+              if (slider_2.offsetWidth-slider.scrollLeft<=0) slider.scrollLeft-=slider_1.offsetWidth
+              else {slider.scrollLeft++;}
+            } else if (direction == "right"){
+              if (slider.scrollLeft<=0) slider.scrollLeft+=slider_2.offsetWidth
+              else {slider.scrollLeft--}
+            }
+          }
+        }
+      }
+
+      function play (type){
+        if (my_config.timer) clearInterval(my_config.timer);
+        var direction = type;
+        var obj = new autoScroll(type);
+        obj.add_banner("images/slide/001.jpg","newhtml.html","solid carbide chucking reamer","_blank");
+        obj.add_banner("images/slide/002.jpg","#","solid carvide burnishing","_blank");
+        obj.add_banner("images/slide/003.jpg","#","weldeon shank","_blank");
+        obj.add_banner("images/slide/004.jpg","#","straight shanks","_blank");
+        obj.add_banner("images/slide/005.jpg","#","cooled solid carbide straight","_blank");
+        obj.add_banner("images/slide/006.jpg","#","solid carbide straight shank","_blank");
+        obj.add_banner("images/slide/007.jpg","#","solid carbide straight shank","_blank");
+        obj.add_banner("images/slide/008.jpg","#","burnishing drills","_blank");
+        obj.add_banner("images/slide/009.jpg","#","cooled solid carbide straight drills","_blank");
+        obj.add_banner("images/slide/010.jpg","#","cooled solid carbide straight drills","_blank");
+        obj.add_banner("images/slide/011.jpg","#","burnishing drills","_blank");
+        obj.add_banner("images/slide/012.jpg","#","burnishing drills","_blank");
+        obj.add_banner("images/slide/013.jpg","#","solid shank twist","_blank");
+ 
+ 
+        obj.play();
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <div class="container">
+      <div class="header">
+       
+      </div>
+
+      <div class="content">
+        <div class="view">
+         <img src="imgs/product_en1.png" />
+            
+
+        </div>
+        <div class="menu">
+          <li><a href="newhtml_en.html">MAIN</a></li>
+          <li><a href="about_en.html" class="topline">ABOUT</a></li>
+          <li><a href="product_en.html" class="topline">PRODUCT</a></li>
+          <li><a href="contact_en.html" class="topline">CONTACT</a></li>      
+        </div>
+
+      </div>
+      <div class="about">
+        <div class="about_contact">
+          <div class="contactab">
+
+            <a href="http://maps.google.com/maps/place?ftid=0x35b2710716b6fdff:0x26d2fb138e973fc1&q=Wu+Zhou+Lu,+Hong+Kou+Qu,+Shanghai,+China,+200080&hl=en&ved=0CAwQ-gswAA&sa=X&ei=QjJvT46KKoKZiQf5ku2lCg" id="adds">address
+              <span>
+                Address: No.299, Wuzhou Road <br/>
+                  Shanghai.China</br>
+                  Code:200080</br>
+               </span></a>
+
+            <a href="#" id="cont">contact<span>
+                陈先生</br>
+                Phone：＋86 21 5596 0384 </br>
+                Fax：＋86 21 6545 0921 </br>
+                Mobile：＋86 136 6148 1708</br>
+                E-mail：daming614@yahoo.cn</span></a></a>
+          </div>
+
+        </div>
+        <div class="about_product">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="20" class="select_direction" onclick="do_left();return false;" align=left><img src="images/slide/ll.png"/></td>
+              <td class="slider_td" >
+                <ul class="slider_ul" id="slider_show" style="background-color:#fff" ></ul>
+              </td>
+              <td width="21" class="select_direction" onclick="do_right();return false;" align=center><img src="images/slide/rr.png" /></td>
+            </tr>
+          </table><script>
+            play("left");
+          </script>
+        </div>
+      </div>
+
+      
+      <div class="footer">
+        <div id="version" >
+        <a href="newhtml_en.html">English</a> | <a href="index.html">Chinese</a>
+        </div>
+        <p>&COPY;Shanghai DAMING International Trade Co., Ltd. </p> 
+        
+
+      </div>
+    </div>
+  </body>
+</html>
